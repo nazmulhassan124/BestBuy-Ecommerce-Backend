@@ -9,7 +9,7 @@ import javax.persistence.Id;
 
 @Data
 @Entity
-public class Vendors {
+public class Vendor {
 
 
     @Id
