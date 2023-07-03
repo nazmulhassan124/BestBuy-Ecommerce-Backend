@@ -5,8 +5,8 @@ import com.nazmul.bestbuy.Service.SignUpService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-@RestController
-@RequestMapping("/signUp")
+//@RestController
+//@RequestMapping("/signUp")
 @CrossOrigin(origins = "http://localhost:4200", allowedHeaders = "*")
 public class SignUpController {
 
