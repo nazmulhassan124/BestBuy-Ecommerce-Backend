@@ -52,9 +52,9 @@ private PasswordEncoder passwordEncoder;
 
 
         User adminUser = new User();
-        adminUser.setUserName("admin123");
+        adminUser.setName("admin");
         adminUser.setPassword(getEncodedPassword("admin@pass"));
-        adminUser.setUserName("admin");
+        adminUser.setUserName("admin123");
 
         adminUser.setEmail("admin@gmail.com");
 

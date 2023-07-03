@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/vendor")
+@RequestMapping("p1/vendor")
 @CrossOrigin(origins = "http://localhost:4200", allowedHeaders = "*")
 public class VendorController {
 
