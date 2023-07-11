@@ -40,6 +40,9 @@ public class UserController {
         user.setUserName(signupRequest.getUserName());
         user.setEmail(signupRequest.getEmail());
         user.setPassword(signupRequest.getPassword());
+        user.setName(signupRequest.getName());
+        user.setImage(signupRequest.getImage());
+       // user.setCreatedDateTime();
 
 //        BeanUtils.copyProperties(signupRequest,user,"username");
 //        user.setRole((Set<Role>) new Role("User"));
