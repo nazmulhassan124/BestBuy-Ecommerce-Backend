@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
+import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.lang.Nullable;
 
 import javax.persistence.GeneratedValue;
@@ -27,7 +28,7 @@ public class BaseModel implements Serializable {
     @CreationTimestamp
     private LocalDateTime createdDateTime;
     private String createdBy;
-    @CreationTimestamp
+    @LastModifiedDate
     private LocalDateTime updatedDateTime;
     @Nullable
     private String updatedBy;

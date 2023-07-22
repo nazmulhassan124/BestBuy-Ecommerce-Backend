@@ -1,5 +1,6 @@
 package com.nazmul.bestbuy.Entity;
 
+import com.nazmul.bestbuy.BaseModel.BaseModel;
 import lombok.Data;
 
 import javax.persistence.Entity;
@@ -9,15 +10,12 @@ import javax.persistence.Id;
 
 @Data
 @Entity
-public class Category {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private long catid;
-    private String catname;
-    private String catdesc;
-    private String catimage;
+public class Category extends BaseModel {
 
-
+    private String catName;
+    private String catDesc;
+    private String catImage;
+    private boolean isActive;
 
 
 }
