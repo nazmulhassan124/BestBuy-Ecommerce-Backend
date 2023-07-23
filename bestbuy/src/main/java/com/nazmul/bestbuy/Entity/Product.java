@@ -21,8 +21,8 @@ public class Product extends BaseModel {
     private int quantity;
     private long catId;   //fk
     private String catName;  //fk
-    private long SubCatId;    //fk
-    private String SubCatName;    //fk
+    private long subCatId;    //fk
+    private String subCatName;    //fk
 
     private long brandId;  //fk
     private String brandName;   //fk

@@ -22,7 +22,7 @@ public class ProductService {
         return null;
     }
 
-    public Product getById(Integer id) {
+    public Product getById(Long id) {
         Optional<Product> optional = productRepository.findById(id);
         if(optional.isPresent()) {
             return optional.get();
@@ -34,7 +34,7 @@ public class ProductService {
         return productRepository.save(product);
     }
 
-    public String delete(Integer id) {
+    public String delete(long id) {
         Optional<Product> optional = productRepository.findById(id);
         if(optional.isPresent()) {
             productRepository.delete(optional.get());

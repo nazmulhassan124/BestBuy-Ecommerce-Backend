@@ -17,10 +17,11 @@ public class Brand {
     private String brandImage;
     private String description;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "catId")
-    private Category category;  //fk
+//    @OneToOne(cascade = CascadeType.ALL)
+//    @JoinColumn(name = "catId")
+//    private Category category;  //fk
 
+    private long catId;
     private String catName;
     private boolean isActive;
 }

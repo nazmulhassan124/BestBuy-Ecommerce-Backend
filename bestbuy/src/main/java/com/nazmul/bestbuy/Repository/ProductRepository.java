@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface ProductRepository   extends JpaRepository<Product, Integer> {
+public interface ProductRepository   extends JpaRepository<Product, Long> {
 
     @Query(value = "SELECT * FROM product where pro_cat =? ", nativeQuery = true)
     List<Product> getCategoryWiseProduct(String catname);

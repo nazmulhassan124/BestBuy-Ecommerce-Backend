@@ -18,10 +18,10 @@ public class SubCategory {
     private String subCatName;
     private String subCatDesc;
     private String subCatImage;
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "catId")
-    private Category category;  //fk
-
+//    @OneToOne(cascade = CascadeType.ALL)
+//    @JoinColumn(name = "catId")
+//    private Category category;  //fk
+    private long catId;
     private String catName;
     private boolean isActive;
 }

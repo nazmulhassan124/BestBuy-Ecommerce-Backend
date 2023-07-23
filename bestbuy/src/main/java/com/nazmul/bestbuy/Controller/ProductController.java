@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/product")
+@RequestMapping("p1/product")
 @CrossOrigin(origins = "http://localhost:4200", allowedHeaders = "*")
 public class ProductController {
 
@@ -23,7 +23,7 @@ public class ProductController {
 
 
     @GetMapping("/getById/{id}")
-    public Product getById(@PathVariable Integer id) {
+    public Product getById(@PathVariable Long id) {
         return productService.getById(id);
     }
 
@@ -34,7 +34,7 @@ public class ProductController {
 
 
     @DeleteMapping("/delete/{id}")
-    public String delete(@PathVariable Integer id) {
+    public String delete(@PathVariable Long id) {
         return productService.delete(id);
     }
 

@@ -52,11 +52,12 @@ private PasswordEncoder passwordEncoder;
 
 
         User adminUser = new User();
-        adminUser.setName("admin");
+        adminUser.setName("Nazmul Hassan");
         adminUser.setPassword(getEncodedPassword("admin@pass"));
         adminUser.setUserName("admin123");
 
-        adminUser.setEmail("admin@gmail.com");
+        adminUser.setEmail("topunazmulhassan@gmail.com");
+        adminUser.setImage("assets/images/nazmul.jpg");
 
         Set<Role> adminRoles = new HashSet<>();
 
