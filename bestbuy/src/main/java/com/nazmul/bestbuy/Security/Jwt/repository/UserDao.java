@@ -23,4 +23,10 @@ public interface UserDao extends CrudRepository<User,String> {
     public List<User> getFilteredListByRole(@Param("role") String role);
 
 
+//    @Query(value = "SELECT * FROM hibernate_sequence ;", nativeQuery = true)
+//    Long getNextSeriesId();
+
+    @Query(value="SELECT max(user_id) FROM user;", nativeQuery = true )
+    Long getNextSeriesId();
+
 }

@@ -3,6 +3,7 @@ package com.nazmul.bestbuy.Controller;
 
 import com.nazmul.bestbuy.Entity.Brand;
 
+import com.nazmul.bestbuy.Entity.SubCategory;
 import com.nazmul.bestbuy.Service.BrandService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -51,5 +52,9 @@ public class BrandController {
         return brandService.getAllCategory();
     }
 
+    @GetMapping("/getCatwiseBrand")
+    public List<Brand> getBrandWiseProduct(@RequestParam(value="catId") Long catid) {
+        return brandService.getBrandbyCat(catid);
+    }
 
 }

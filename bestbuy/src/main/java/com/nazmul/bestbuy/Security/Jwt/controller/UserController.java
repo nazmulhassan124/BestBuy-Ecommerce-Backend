@@ -36,12 +36,16 @@ public class UserController {
 
     @PostMapping("/signup")      // atar kaj nei
     public ResponseEntity<?> registerNewUserNew(@RequestBody SignupRequest signupRequest) {
+        Long getid = 1+ userDao.getNextSeriesId();
+
         User user = new User();
         user.setUserName(signupRequest.getUserName());
         user.setEmail(signupRequest.getEmail());
         user.setPassword(signupRequest.getPassword());
         user.setName(signupRequest.getName());
         user.setImage(signupRequest.getImage());
+
+        user.setUserId( getid );
        // user.setCreatedDateTime();
 
 //        BeanUtils.copyProperties(signupRequest,user,"username");

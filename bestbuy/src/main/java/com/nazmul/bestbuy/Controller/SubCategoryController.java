@@ -1,6 +1,7 @@
 package com.nazmul.bestbuy.Controller;
 
 
+import com.nazmul.bestbuy.Entity.Product;
 import com.nazmul.bestbuy.Entity.SubCategory;
 
 import com.nazmul.bestbuy.Service.SubCategoryService;
@@ -51,4 +52,11 @@ public class SubCategoryController {
     public List<SubCategory> getAll() {
         return  subCatService.getAllCategory();
     }
+
+
+    @GetMapping("/getCategoryWiseSubCat")
+    public List<SubCategory> getCategoryWiseProduct(@RequestParam(value="catId") Long catid) {
+        return subCatService.getSubCatbyCat(catid);
+    }
+
 }

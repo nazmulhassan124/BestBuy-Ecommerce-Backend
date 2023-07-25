@@ -1,6 +1,7 @@
 package com.nazmul.bestbuy.Service;
 
 import com.nazmul.bestbuy.Entity.Brand;
+import com.nazmul.bestbuy.Entity.SubCategory;
 import com.nazmul.bestbuy.Entity.Vendor;
 import com.nazmul.bestbuy.Repository.BrandRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -55,6 +56,8 @@ public class BrandService {
         return brandRepo.saveAll(brand);
     }
 
-
+    public List<Brand> getBrandbyCat(Long catId ){
+        return brandRepo.getBrandbyCat(catId);
+    }
 
 }

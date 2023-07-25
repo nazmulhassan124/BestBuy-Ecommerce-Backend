@@ -48,14 +48,14 @@ private PasswordEncoder passwordEncoder;
         roleDao.save(userRole);
 
 
-
+        Long getid = (long) 1000;
 
 
         User adminUser = new User();
         adminUser.setName("Nazmul Hassan");
         adminUser.setPassword(getEncodedPassword("admin@pass"));
         adminUser.setUserName("admin123");
-
+adminUser.setUserId(getid);
         adminUser.setEmail("topunazmulhassan@gmail.com");
         adminUser.setImage("assets/images/nazmul.jpg");
 

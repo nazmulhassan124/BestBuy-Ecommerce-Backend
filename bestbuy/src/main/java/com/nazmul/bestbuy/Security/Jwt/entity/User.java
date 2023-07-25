@@ -31,6 +31,8 @@ public class User implements UserDetails {
 
     private String image;
 
+
+    private Long userId;
     @CreationTimestamp
     private LocalDateTime createdDateTime;
 

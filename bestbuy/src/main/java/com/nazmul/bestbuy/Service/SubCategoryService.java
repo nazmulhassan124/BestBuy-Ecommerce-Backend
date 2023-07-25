@@ -60,4 +60,7 @@ public class SubCategoryService {
         return subCatRepo.saveAll(brand);
     }
 
+    public List<SubCategory> getSubCatbyCat(Long catId ){
+        return subCatRepo.getSubCatbyCat(catId);
+    }
 }

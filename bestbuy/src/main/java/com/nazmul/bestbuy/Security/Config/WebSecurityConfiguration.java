@@ -33,7 +33,7 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
 
 
 
-    private static final String[] PUBLIC_URLS = {"/swagger-ui/**","/v3/api-docs/**","/api/auth/**", "/registerNewUser","/api/test/**","/signup","/testController/**","/updateUser"};
+    private static final String[] PUBLIC_URLS = {"/swagger-ui/**","/v3/api-docs/**","/api/auth/**", "/registerNewUser","/api/test/**","/signup","/testController/**","/updateUser","/p2/**"};
 //    private static final String[] PUBLIC_URLS = {"/swagger-ui/**","/api/auth/**","/api/test/**"};
 
     @Bean
