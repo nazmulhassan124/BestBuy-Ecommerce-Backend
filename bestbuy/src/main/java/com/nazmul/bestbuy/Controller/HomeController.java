@@ -9,10 +9,7 @@ import com.nazmul.bestbuy.Service.CategoryService;
 import com.nazmul.bestbuy.Service.ProductService;
 import com.nazmul.bestbuy.Service.SubCategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -53,6 +50,9 @@ public class HomeController {
     }
 
 
-
+    @GetMapping("/getProductById/{id}")
+    public Product getById(@PathVariable Long id) {
+        return productService.getById(id);
+    }
 
 }
