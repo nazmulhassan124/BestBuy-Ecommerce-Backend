@@ -55,4 +55,14 @@ public class HomeController {
         return productService.getById(id);
     }
 
+    @GetMapping("/getCategoryWiseSubCat")
+    public List<SubCategory> getCategoryWiseProduct(@RequestParam(value="catId") Long catid) {
+        return subCatService.getSubCatbyCat(catid);
+    }
+
+    @GetMapping("/getCatwiseBrand")
+    public List<Brand> getBrandWiseProduct(@RequestParam(value="catId") Long catid) {
+        return brandService.getBrandbyCat(catid);
+    }
+
 }
