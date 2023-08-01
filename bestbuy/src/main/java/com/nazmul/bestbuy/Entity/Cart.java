@@ -21,7 +21,7 @@ public class Cart {
     private String name;  // product name
     private String catName;  // pro cat name
     private String productImage_1;
-    private double pro_pregularPrice;
+    private double regularPrice;
     private double offerPrice;
     private String description;
     private int quantity;
