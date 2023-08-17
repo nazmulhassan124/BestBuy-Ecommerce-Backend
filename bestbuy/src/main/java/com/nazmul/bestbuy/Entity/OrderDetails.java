@@ -23,6 +23,7 @@ private Long order_details_id;
     private double offerPrice;
     private String description;
     private int quantity;
+    private double total;
 
 //   @ManyToOne
 //   @JoinColumn(name = "order_id")

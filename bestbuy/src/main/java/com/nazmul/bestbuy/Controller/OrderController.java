@@ -1,5 +1,6 @@
 package com.nazmul.bestbuy.Controller;
 
+import com.nazmul.bestbuy.Entity.OrderDetails;
 import com.nazmul.bestbuy.Entity.Orders;
 import com.nazmul.bestbuy.Service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,6 +26,16 @@ public class OrderController {
     @GetMapping("/getOrderList")
     public List<Orders> getOrderList(@RequestParam(value="userId") Long id) {
         return orderService.getOrderList(id);
+    }
+
+    @GetMapping("/getOrderDetails")
+    public Orders getOrderDetails(@RequestParam(value="userId") Long id ,@RequestParam(value="orderId") Long orderId    ) {
+        return orderService.getOrderDetails(id, orderId);
+    }
+
+    @GetMapping("/getOrderDetailsList")
+    public List<OrderDetails> getOrderDetailsList(@RequestParam(value="userId") Long id , @RequestParam(value="order_id_fk") Long orderId    ) {
+        return orderService.getOrderDetailsList(id, orderId);
     }
 
     @GetMapping("/getAllOrderList")
